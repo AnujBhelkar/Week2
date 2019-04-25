@@ -1,10 +1,9 @@
 /****************************************************************************************************************
- *  Execution       :   1. default node         cmd> node intAsInput.js                                              *
- *  Purpose         : Compute the binary representation of n                                                     *
+ *  Execution       :   1. default node         cmd> node taskScheduling.js                                      *
+ *  Purpose         : Compute long list of tasks that you need to do today. To accomplish task you need M        *
+ *                     minutes, and the deadline for this task is D                                              *
  *                                                                                                               *
- *  @file           : intAsInput.js                                                                                    *
- *  @overview       : i. Swap nibbles and find the new number.                                                   *
- *                    ii. Find the resultant number is the number is a power of 2.                               *
+ *  @file           : taskScheduling.js                                                                                    *
  *  @author         : ANUJ                                                                                           *
  *  @version        : 1.0                                                                                        *
  *  @since          : 25/04/2019                                                                                 * 
@@ -13,5 +12,5 @@
 
 const read = require("readline-sync");
 const utility = require("./utility");
-let decimal = read.question(" Enter the Decimal Number:- ");
-utility.intAsInput(decimal);
+let task = read.question(" Enter Number of task:- ");
+utility.taskScheduling(task);

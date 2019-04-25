@@ -1,10 +1,11 @@
 /****************************************************************************************************************
- *  Execution       :   1. default node         cmd> node intAsInput.js                                              *
- *  Purpose         : Compute the binary representation of n                                                     *
+ *  Execution       :   1. default node         cmd> node guessGame.js                                           *     
+ *  Purpose         : Takes a command­line argument N, asks you to think of a number                              *
+ *                    between 0 and N­1, where N = 2^n, and always guesses the answer with n                      *
+ *                    questions.                                                                                 *
  *                                                                                                               *
- *  @file           : intAsInput.js                                                                                    *
- *  @overview       : i. Swap nibbles and find the new number.                                                   *
- *                    ii. Find the resultant number is the number is a power of 2.                               *
+ *  @file           : guessGame.js                                                                               *
+ *  @overview       : Always guesses the answer with n questions.                                                *                                                                                                        *
  *  @author         : ANUJ                                                                                           *
  *  @version        : 1.0                                                                                        *
  *  @since          : 25/04/2019                                                                                 * 
@@ -13,5 +14,4 @@
 
 const read = require("readline-sync");
 const utility = require("./utility");
-let decimal = read.question(" Enter the Decimal Number:- ");
-utility.intAsInput(decimal);
+utility.guessGame();

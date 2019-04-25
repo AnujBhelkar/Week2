@@ -198,6 +198,33 @@ var method = {
             k++;
         }      
         console.log(dec);
+    },
+    taskScheduling(task){
+        let dead = [];
+        let min = [];
+        for(let i = 0; i < task; i++){
+            min[i] = read.question("task " + i +" time ");
+            dead[i] = read.question("task " + i +" deadline ");
+        }
+    },
+    guessGame(){
+            let high = 127;
+            let low = 0;
+            mid = Math.floor((high + low)/2);
+            console.log("Guess the number Between 0 to 127 ");
+                while(low != high){
+                    mid = Math.floor((high + low)/2);
+                    let choice = read.question("Enter 1 if the value between " + low + " - " + mid +
+                    "\n Enter 2 if the value Between "+ (mid + 1) + " - " + high+" ");                   
+                    if( choice == 1)
+                        high = mid;
+                    else if(choice == 2)
+                        low = mid + 1;
+                    else{
+                        console.log(" you Enter Wrong Choice");
+                    }
+                }
+                console.log(low);
     }
 
 }
