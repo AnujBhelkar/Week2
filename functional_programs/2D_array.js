@@ -4,7 +4,7 @@ const readline = require("readline-sync");
     let cols = readline.question("Enter Number of columns ");
         let arr = [];
             for( let i = 0; i < rows ; i++){
-                arr.push([0]);
+                arr.push([i]);
                 for( let j = 0; j < rows ; j++){
                     arr[i][j] = readline.question();
                 }                 

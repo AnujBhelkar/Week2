@@ -72,7 +72,7 @@ var method = {
             
             for(let i = 1; i < str.length; i++){
                 for(let j = i - 1; j < i && j >= 0; j--){
-                    if(str[j] > str[j + 1]){
+                    if(parseInt(str[j]) > parseInt(str[j + 1])){
                         temp1 = str[j];
                         str[j] = str[j + 1];
                         str[j + 1] = temp1;
