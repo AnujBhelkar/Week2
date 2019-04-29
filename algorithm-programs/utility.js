@@ -45,6 +45,29 @@ var method = {
             console.log("The Two string are not anagram ");
         }
     },
+    binarySearchString(){
+        let fs = require("fs");
+        let strings = fs.readFileSync('wordSepComma','UTF-8');
+        let words = strings.split(",");
+        words.sort();
+        
+        let search = read.question(" Enter that you want to search from file ");
+        let low = 1;
+        let heigh = words.length ;
+        let mid = Math.floor( ( low + heigh ) / 2 );
+        while( heigh >= low ){
+            mid = Math.floor(  low + heigh  / 2 );
+                if(words[mid] == search)
+                    return mid;             
+                else if( words[mid] > search )
+                    heigh = mid -1 ;                
+                else if(words[mid] < search)
+                    low = mid + 1;
+            }       
+        return -1
+
+    },
+
     bubbleSort(){
         let nOE = read.question("Enter Number OF Elements ");
         let elements = [];

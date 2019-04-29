@@ -186,43 +186,6 @@ class LinkedList {
         return str;
     }
 
-   /* 
-    addAscending() {
-        var main = this.head;
-        var mainHead = null;
-        while (main) {
-            var n = new Node(main.data);
-            var flag = true;
-            if (mainHead == null) {
-                mainHead = n;
-                this.head = mainHead;
-            } else {
-                var pre = mainHead, curr = mainHead;
-                if (curr.next == null) {
-                    if (n.data < curr.data) {
-                        n.next = curr;
-                        mainHead = n;
-                        flag = false;
-                    }
-                }
-                while (curr && flag) {
-                    if (n.data > curr.data) {
-                        pre.next = n;
-                        n.next = curr;
-                        flag = false;
-                    }
-                    pre = curr;
-                    curr = curr.next;
-                }
-                if (flag) {
-                    pre.next = n;
-                }
-            }
-            main = main.next;
-        }
-        return this.head = mainHead;
-    } */
-
     show() {
         var curr = this.head;
         var str = "";
