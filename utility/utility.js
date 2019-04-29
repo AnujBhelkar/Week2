@@ -220,6 +220,39 @@ var method = {
         else{
             console.log("Values not in range");
         }
+    },
+
+  permutation(string, str, first, last) {
+    if (first == last) {
+      console.log(str);
+      string = string + str;
     }
+    else {
+      for (let index = first; index <= last; index++) {
+        //call swapstring method swap the characters 
+        str = this.swapString(str, first, index);
+        // recursion method 
+        string = this.permutation(string, str, first + 1, last);
+        str = this.swapString(str, first, index);
+      }
+    }
+    return string;
+  },
+  // swap method for swaping the string character
+  swapString(str, first, last) {
+    var as = '';
+    //empty array
+    var ch = [];
+    //split string into the character
+    ch = str.split('');
+    // temporary variable
+    var temp = ch[first];
+    ch[first] = ch[last];
+    ch[last] = temp;
+    for (let index = 0; index < str.length; index++) {
+      as = as + ch[index];
+    }
+    return as;
+  }
 };
     module.exports = method;
