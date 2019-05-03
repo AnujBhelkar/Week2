@@ -1,0 +1,53 @@
+{
+    "Rice" : [
+        {
+            "name"   : "White Rice",
+            "weight" : 1000,
+            "prize"  : 30
+        },
+        {
+            "name"   : "Black Rice",
+            "weight" : 1000,
+            "prize"  : 60
+        },
+        {
+            "name"   : "Brown Rice",
+            "weight" : 1000,
+            "prize"  : 120
+        }
+    ],
+    "Pulses" : [
+        {
+            "name"   : "Kidney Beans",
+            "weight" : 1000,
+            "prize"  : 40
+        },
+        {
+            "name"   : "Lima Beans",
+            "weight" : 1000,
+            "prize"  : 60
+        },
+        {
+            "name"   : "Broad Beans",
+            "weight" : 1000,
+            "prize"  : 80
+        }
+    ],
+    "Wheat" : [
+        {
+            "name"   : "Bread Wheat",
+            "weight" : 1000,
+            "prize"  : 28
+        },
+        {
+            "name"   : "Durum Wheat",
+            "weight" : 1000,
+            "prize"  : 35
+        },
+        {
+            "name"   : "Common Wheat",
+            "weight" : 1000,
+            "prize"  : 40
+        }
+    ]
+}

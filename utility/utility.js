@@ -38,26 +38,25 @@ var method = {
         }
     },
 
-    leap_year: function(year,count){
-        
-        if(count == 4 && year != 0000){
+    leap_year: function(){
+        var readline =require("readline-sync");
+        let year = readline.question("Enter a year");
+        let count = year.length;
+        if(count == 4 && year > 0){
             if( year % 4 == 0){
                 if( year % 100 == 0){
                     if( year % 400 == 0 ){
-                    console.log("Year is a leap year");
+                        return 1;
                     }else{
-                        console.log("Not a leap year");
+                        return 0;
                     }
                 }else{
-                    console.log("year is leap year");
+                    return 1;
                 }   
             }
             else{
-                console.log("Not a leap year");
+                return 0;
             }
-        }
-        else{
-            console.log("Enter year in yyyy format");
         }
     },
 

@@ -4,12 +4,17 @@
   "description": "Data structure Programs testing",
   "main": "linkedListTest.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha || true "
   },
   "author": "ANUJ",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^6.1.4"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "keywords": []
 }
