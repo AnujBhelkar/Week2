@@ -1,0 +1,17 @@
+{
+    "stocks" : [{
+                    "stock_name"        : "Rk",
+                    "Number_of_shares"  : "80",
+                    "share_price"       : "100"
+                },
+                {
+                    "stock_name"        : "Infosys",
+                    "Number_of_shares"  : "120",
+                    "share_price"       : "1000"
+               },
+                {
+                    "stock_name"        : "Duster",
+                    "Number_of_shares"  : "160",
+                    "share_price"       : "2000"
+                }]
+}

@@ -81,7 +81,7 @@ function inventory()
                              * Validating Number Items
                              */
                             default :
-                                return 1;
+                                return choice;
                     }
                 }
                 catch(err){
