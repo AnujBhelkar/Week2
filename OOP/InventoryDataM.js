@@ -39,7 +39,7 @@ function inventory()
                                         console.log("Per kg of " + JSONData.Rice[i].name + " cost " + JSONData.Rice[i].prize +
                                                     " And for " + weight + " Kgs  cost " + weight * JSONData.Rice[i].prize);
                                     }
-                                    return true;
+                                    return 1;
                                 }
                                 else{
                                     return false;
@@ -55,7 +55,7 @@ function inventory()
                                     console.log("Per kg of " + JSONData.Pulses[i].name + " cost " + JSONData.Pulses[i].prize +
                                                 " And for " + weight1 + " Kgs  cost " + weight1 * JSONData.Pulses[i].prize);
                                 }
-                                return true;
+                                return 1;
                             }
                             else{
                                 return false;
@@ -71,9 +71,9 @@ function inventory()
                                     console.log("Per kg of " + JSONData.Wheat[i].name + " cost " + JSONData.Wheat[i].prize +
                                                 " And for " + weight3 + " Kgs  cost " + weight3 * JSONData.Wheat[i].prize);
                                 }
-                                return true;
+                                return 1;
                             }
-                            else{
+                            else{s
                                 return false;
                             }
                             break;

@@ -4,7 +4,8 @@
  * @author  : ANUJ
  * @since   : 03-05-2019
  */
-let except = require('chai').expect;
+let assert = require('chai').assert;
+let expect = require('chai').expect
 let fs = require('fs');
 let data =fs.readFileSync("/home/admin1/fellowShipPrograms/OOP/JSONFiles/InventoryDataM.json");
 JSON.parse(data);
@@ -17,15 +18,17 @@ JSON.parse(data);
 
 let inventoryData = require('../../../OOP/InventoryDataM');
 
-describe(' Number or String ', function(){
-        it('Input is number Not a string', function(){
-            let data1 = inventoryData;
-            except(data1).to.be.true;
+describe(' Check Choice ', function(){
+        it('Only Number ', function(done){
+            let data1 = parseInt(inventoryData);
+            //console.log(data1);
+            assert.isNotNaN(data1);
+            done();
         });
-    });
-    describe(' Check Choice ', function(){
-        it('Select Choice is wrong', function(){
+        it('Select Choice is wrong', function(done){
             let data = inventoryData;
-            except(data).to.equal(true);
+            assert.isBelow(data,4);
+            done();            
         });
+
     });
