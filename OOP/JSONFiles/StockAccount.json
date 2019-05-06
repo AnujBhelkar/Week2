@@ -1,0 +1,11 @@
+
+{
+    "stockAccount" : [
+            {
+                "shareName"     : "TCS",
+                "stockSymbol"   : "Tc",
+                "NumberOfShares": "500",
+                "sharePerPrice" : "1000"
+            }
+    ]
+}

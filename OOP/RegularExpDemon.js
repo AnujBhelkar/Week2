@@ -12,6 +12,7 @@ function regularExpDemon(){
     try {    
         let read = require("readline-sync");
         let utility = require("./OOPUtility");
+        let arr = [];
             /**
              * Read the name and validate it
              */
@@ -32,16 +33,21 @@ function regularExpDemon(){
          * Read the mobile Number name and validate it
          */
         var mobileNumber = read.question("Enter Your Mobile Number :- ");
-        while(isNaN(mobileNumber)==true || mobileNumber.length != 10){
+        while(isNaN(mobileNumber)==true ){
             console.log('Please, Re-Enter your Mobile Number ');
                 var mobileNumber = read.question('Enter Your Mobile Number ');   
         }
         let date = new Date();
         let ans = date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear();
-
-        utility.regularExp(name,fullName,mobileNumber,ans);
+        arr[0] = name;
+        arr[1] = fullName;
+        arr[2] = mobileNumber;
+         utility.regularExp(name,fullName,mobileNumber,ans);
+        return arr;
     }
     catch(err){
         console.log(err);
     }
-}regularExpDemon();
+}
+let reg = regularExpDemon();
+module.exports =  reg;
