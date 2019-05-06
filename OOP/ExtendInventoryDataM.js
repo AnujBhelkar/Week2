@@ -12,9 +12,15 @@
 let read = require("readline-sync");
 let fs = require("fs");
 let util = require("./ExtendInventoryDataMUtil");
-let data = fs.readFileSync("./JSONFiles/ExtendInventoryDataM.json");
-let JSONData = JSON.parse(data);
-    function inventManage(){
-        util.inventManage(JSONData)
+let data = fs.readFileSync("/home/admin1/fellowShipPrograms/OOP/JSONFiles/ExtendInventoryDataM.json");
+let JSONData = JSON.parse(data);    
+function inventManage(){
+        if(JSONData != null){
+            util.inventManage(JSONData)
+            return true;
+        }
+        else{
+            return false;
+        }       
     }
-inventManage();
+module.exports = inventManage();

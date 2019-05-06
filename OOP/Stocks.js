@@ -9,4 +9,13 @@ let utility = require('./stockUtility');
 let read = require('readline-sync');
 let data = fs.readFileSync('/home/admin1/fellowShipPrograms/OOP/JSONFiles/stocks.json');
 let stocks = JSON.parse(data);
-utility.stock(stocks);
+function stock(){
+    if(stocks != null){
+        utility.stock(stocks);
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+module.exports = stock();
