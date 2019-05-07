@@ -8,7 +8,7 @@ let assert = require('chai').assert;
 let expect = require('chai').expect
 let fs = require('fs');
 let data =fs.readFileSync("/home/admin1/fellowShipPrograms/OOP/JSONFiles/InventoryDataM.json");
-JSON.parse(data);
+let obj = JSON.parse(data);
             // let fs = require('fs');
             // //read JSON File ans store data into data variable
             // let data = fs.readFileSync('../../../OOP/JSONFiles/InventoryDataM.json');
@@ -30,5 +30,58 @@ describe(' Check Choice ', function(){
             assert.isBelow(data,4);
             done();            
         });
+    });
 
+    //check the JSON data is converted into object
+    describe("Check Data",() =>{
+        it("JASON data is converted into object or not ",() => {
+            assert.isObject(obj);
+        // console.log(obj);
+        });
+    });
+    
+    describe("Check Data For Rice",() =>{
+        it("Name is string or not",() => {
+            for(let i = 0; i < obj.Rice.length; i++){
+                assert.isString(obj.Rice[i].name);
+            }
+        // console.log(obj);
+        });
+        it("weight and price should be in number",() => {
+            for(let i = 0; i < obj.Rice.length; i++){
+                assert.isNumber(obj.Rice[i].weight);
+                assert.isNumber(obj.Rice[i].prize);
+            }
+        // console.log(obj);
+        });
+    });
+    describe("Check Data For Pulses",() =>{
+        it("Name is string or not",() => {
+            for(let i = 0; i < obj.Pulses.length; i++){
+                assert.isString(obj.Pulses[i].name);
+            }
+        // console.log(obj);
+        });
+        it("weight and price should be in number",() => {
+            for(let i = 0; i < obj.Pulses.length; i++){
+                assert.isNumber(obj.Pulses[i].weight);
+                assert.isNumber(obj.Pulses[i].prize);
+            }
+        // console.log(obj);
+        });
+    });
+    describe("Check Data For Wheat",() =>{
+        it("Name is string or not",() => {
+            for(let i = 0; i < obj.Wheat.length; i++){
+                assert.isString(obj.Wheat[i].name);
+            }
+        // console.log(obj);
+        });
+        it("weight and price should be in number",() => {
+            for(let i = 0; i < obj.Wheat.length; i++){
+                assert.isNumber(obj.Wheat[i].weight);
+                assert.isNumber(obj.Wheat[i].prize);
+            }
+        // console.log(obj);
+        });
     });

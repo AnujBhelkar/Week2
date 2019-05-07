@@ -30,7 +30,7 @@ class ExInventory{
                     noOfShares: noOfShares,
                     price     : price
                 });
-                fs.writeFileSync("./JSONFiles/ExtendInventoryDataM.json",JSON.stringify(JSONData));
+                fs.writeFileSync("/home/admin1/fellowShipPrograms/OOP/JSONFiles/ExtendInventoryDataM.json",JSON.stringify(JSONData));
                 this.inventManage();
             }
         // Remove data by stockname
