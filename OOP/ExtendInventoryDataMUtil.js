@@ -48,7 +48,7 @@ class ExInventory{
                     console.log("Stock Deleted Successfully !!");
                 }
             }
-            fs.writeFileSync("./JSONFiles/ExtendInventoryDataM.json",JSON.stringify(JSONData))
+            fs.writeFileSync("/home/admin1/fellowShipPrograms/OOP/JSONFiles/ExtendInventoryDataM.json",JSON.stringify(JSONData))
             if(count = 0){
                 console.log("Stock Not Found ");
                 this.remove(JSONData);
